@@ -13,36 +13,12 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logging.info('Starting Bot...')
 
-@bot.message_handler(commands=['start'])
-def greet(message):
-  bot.reply_to(message, "Hi Click This /video")
-
-
-
-@bot.message_handler(commands=['hello'])
-def hello(message):
-  bot.send_message(message.chat.id, "Hello!")
-  
-@bot.message_handler(commands=["video", "vid"])
-def video(message):
-    vid = open("video0.mp4", "rb")
-    bot.send_video(message.chat.id, vid)
-
-
-@bot.message_handler(commands=["kurd", "krd"])
-def video(message):
-    vid = open("hamaa.mp4", "rb")
-    bot.send_video(message.chat.id, vid)
 
 @bot.message_handler(commands=["aykay", "hhh"])
 def video(message):
     vid = open("aykay.mp4", "rb")
     bot.send_video(message.chat.id, vid)
-  
-
-@bot.message_handler(commands=['status'])
-def greet(message):
-  bot.reply_to(message, "Online 🟢 ")
+ 
 
 # We defined this fuction to use as commands
 # all update.message are reply from bots to user
